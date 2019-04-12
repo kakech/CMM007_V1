@@ -41,7 +41,7 @@ else {
 	<div class="top_bar"> 
 
 		<div class="logo">
-			<a href="index.php">The Student Buddies</a>
+			<a href="../index.php">The Student Buddies</a>
 		</div>
 
 
