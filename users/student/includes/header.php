@@ -19,7 +19,7 @@ else {
 
 <html>
 <head>
-	<title>Welcome to the Student Buddies</title>
+	<title>Welcome to the Buddies ChatRoom</title>
 
 	<!-- Javascript -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -41,7 +41,7 @@ else {
 	<div class="top_bar"> 
 
 		<div class="logo">
-			<a href="../index.php">The Student Buddies!</a>
+			<a href="index.php">The Student Buddies</a>
 		</div>
 
 

@@ -89,7 +89,7 @@ if(isset($_POST['register_button'])){
 	}*/
 
 	if(strlen($password > 30 || strlen($password) < 5)) {
-		array_push($error_array, "Your password must be betwen 5 and 30 characters<br>");
+		array_push($error_array, "Your password must be between 5 and 30 characters<br>");
 	}
 
 
@@ -120,7 +120,7 @@ if(isset($_POST['register_button'])){
 
 		$query = mysqli_query($con, "INSERT INTO users VALUES ('', '$fname', '$lname', '$username', '$em', '$password', '$date', '$profile_pic', '0', '0', 'no', ',')");
 
-		array_push($error_array, "<span style='color: #14C800;'>Credentials Confirmed! Go ahead and login!</span><br>");
+		array_push($error_array, "<span style='color: #14C800;'>The ChatRoom username created! Login!</span><br>");
 
 		//Clear session variables 
 		$_SESSION['reg_fname'] = "";

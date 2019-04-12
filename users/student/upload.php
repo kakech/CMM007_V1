@@ -80,7 +80,7 @@ if(isset($_FILES['image']['name'])){
     //imagedestroy($fullpath);
     @ unlink($fullpath); // delete the original upload
 
-}//ADD Image 	
+}//ADD Image
 
 /***********************************************************
 3- Cropping & Converting The Image To Jpg

@@ -2,12 +2,13 @@
 require 'config/config.php';
 require 'includes/form_handlers/register_handler.php';
 require 'includes/form_handlers/login_handler.php';
+//include_once 'navigation.php';
 ?>
 
 
 <html>
 <head>
-	<title>Welcome to the Student Buddies!</title>
+	<title>Welcome to the Student Buddies !</title>
 	<link rel="stylesheet" type="text/css" href="assets/css/register_style.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="assets/js/register.js"></script>
@@ -38,8 +39,8 @@ require 'includes/form_handlers/login_handler.php';
 		<div class="login_box">
 
 			<div class="login_header">
-				<h1>The Student Buddies!</h1>
-				Please login. New Student? Confirm Your Credentials Below!
+				<h1>Meet Student Buddies!</h1>
+				Login or sign up below to get a username!
 			</div>
 			<br>
 			<div id="first">
@@ -56,9 +57,10 @@ require 'includes/form_handlers/login_handler.php';
 					<?php if(in_array("Email or password was incorrect<br>", $error_array)) echo  "Email or password was incorrect<br>"; ?>
 					<input type="submit" name="login_button" value="Login">
 					<br>
-					<a href="#" id="signup" class="signup">New Student? Confirm Credentials!</a>
+					<a href="#" id="signup" class="signup">Need a username? Sign Up Here!</a>
                     <br>
-                    <a href="../index.php" id="home" class="home">Back to home...</a>
+                    <a href="../index.php" id="backToHome" class="backToHome">Back to Home...</a>
+
 
 				</form>
 
@@ -110,16 +112,16 @@ require 'includes/form_handlers/login_handler.php';
 					<br>
 					<?php if(in_array("Your passwords do not match<br>", $error_array)) echo "Your passwords do not match<br>"; 
 					//else if(in_array("Your password can only contain english characters or numbers<br>", $error_array)) echo "Your password can only contain english characters or numbers<br>";
-					else if(in_array("Your password must be betwen 5 and 30 characters<br>", $error_array)) echo "Your password must be betwen 5 and 30 characters<br>"; ?>
+					else if(in_array("Your password must be betwen 5 and 30 characters<br>", $error_array)) echo "Your password must be between 5 and 30 characters<br>"; ?>
 
 
-					<input type="submit" name="register_button" value="Confirm">
+					<input type="submit" name="register_button" value="Register">
 					<br>
 
-					<?php if(in_array("<span style='color: #14C800;'>Credentials Confirmed! Go ahead and login!</span><br>", $error_array)) echo "<span style='color: #14C800;'>Credentials Confirmed! Go ahead and login!</span><br>"; ?>
-					<a href="#" id="signin" class="signin">Credentials Confirmed? Login here!</a>
+					<?php if(in_array("<span style='color: #14C800;'>The ChatRoom username created! Login!</span><br>", $error_array)) echo "<span style='color: #14C800;'>The ChatRoom username created! Login!</span><br>"; ?>
+					<a href="#" id="signin" class="signin">Already have a username? Sign in here!</a>
                     <br>
-                    <a href="../index.php" id="home" class="home">Back to home...</a>
+                    <a href="../index.php" id="backToHome" class="backToHome">Back to Home...</a>
 				</form>
 			</div>
 
