@@ -30,7 +30,7 @@ if(isset($_POST['post'])){
 
 	<div class="main_column column">
 		<form class="post_form" action="index.php" method="POST">
-			<textarea name="post_text" id="post_text" placeholder="Got something to say?"></textarea>
+			<textarea name="post_text" id="post_text" placeholder="Wanna post something to the buddies?"></textarea>
 			<input type="submit" name="post" id="post_button" value="Post">
 			<hr>
 
@@ -44,7 +44,7 @@ if(isset($_POST['post'])){
 
 	<div class="user_details column">
 
-		<h4>Popular</h4>
+		<h4><em>Trending</em></h4>
 
 		<div class="trends">
 			<?php 
