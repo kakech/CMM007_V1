@@ -1,5 +1,5 @@
 <?php
-// initialize if session cart is empty
+// initialize if session
 if(!isset($_SESSION['cart'])){
     $_SESSION['cart']=array();
 }
@@ -12,8 +12,10 @@ if(!isset($_SESSION['cart'])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+
+
     <!-- set the page title, for seo purposes too -->
-    <title><?php echo isset($page_title) ? strip_tags($page_title) : "Store Front"; ?></title>
+    <title><?php echo isset($page_title) ? strip_tags($page_title) : "The Buddies System"; ?></title>
 
     <!-- Bootstrap CSS -->
     <link href="<?php echo $home_url; ?>libs/js/bootstrap/dist/css/bootstrap.css" rel="stylesheet" media="screen">
@@ -155,6 +157,10 @@ if(!isset($_SESSION['cart'])){
         .text-align-center{
             text-align:center;
         }
+        .navbar-default{
+            background-color:  #00acee;
+        }
+
     </style>
 
 </head>
@@ -172,7 +178,7 @@ if(!isset($_SESSION['cart'])){
         ?>
         <div class='col-md-12'>
             <div class="page-header">
-                <h1><?php echo isset($page_title) ? $page_title : "The Code of a Ninja"; ?></h1>
+                <h1><?php echo isset($page_title) ? $page_title : "The Student Buddies System"; ?></h1>
             </div>
         </div>
         <?php
