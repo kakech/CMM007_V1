@@ -1,3 +1,9 @@
+<?php
+// initialize if session
+if(!isset($_SESSION['cart'])){
+    $_SESSION['cart']=array();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,10 +12,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title><?php echo isset($page_title) ? strip_tags($page_title) : "Store Admin"; ?></title>
+
+
+    <!-- set the page title, for seo purposes too -->
+    <title><?php echo isset($page_title) ? strip_tags($page_title) : "The Buddies System"; ?></title>
 
     <!-- Bootstrap CSS -->
- 	<link href="<?php echo $home_url; ?>libs/js/bootstrap/dist/css/bootstrap.css" rel="stylesheet" media="screen">
+    <link href="<?php echo $home_url; ?>libs/js/bootstrap/dist/css/bootstrap.css" rel="stylesheet" media="screen">
+
+    <!-- blue imp gallery CSS -->
+    <link rel="stylesheet" href="<?php echo $home_url; ?>libs/js/Bootstrap-Image-Gallery-3.1.1/css/blueimp-gallery.min.css">
+    <link rel="stylesheet" href="<?php echo $home_url; ?>libs/js/Bootstrap-Image-Gallery-3.1.1/css/bootstrap-image-gallery.min.css">
 
     <!-- HTML5 Shiv and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -18,102 +31,138 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-	<!-- jQuery UI CSS -->
-	<link rel="stylesheet" href="<?php echo $home_url; ?>libs/js/jquery-ui-1.11.4.custom/jquery-ui.min.css" />
+    <!-- custom CSS -->
+    <style>
+        .margin-bottom-1em{
+            margin-bottom:1em;
+        }
 
-	<!-- rich text editor CSS -->
-	<link rel="stylesheet" type="text/css" href="<?php echo $home_url; ?>libs/js/yellow-text-master/demo/stylesheets/yellow-text-default.css" />
+        .width-30-percent{
+            width:30%;
+        }
 
-	<!-- custom CSS -->
-	<style>
-	.width-30-percent{
-		width:30%;
-	}
+        .margin-1em-zero{
+            margin:1em 0;
+        }
 
-	.margin-left-1em{
-		margin:0 1em 0 0;
-	}
+        .width-30-percent{
+            width:30%;
+        }
 
-	.width-20-em{
-		width: 20em;
-	}
+        .width-70-percent{
+            width:70%;
+        }
 
-	.width-13-em{
-		width: 13em;
-	}
+        .photo-thumb{
+            width:214px;
+            height:214px;
+            float:left;
+            border: thin solid #d1d1d1;
+            margin:0 1em 1em 0;
+        }
 
-	.margin-zero{
-		margin:0;
-	}
+        div#blueimp-gallery div.modal {
+            overflow: visible;
 
-	.padding-zero{
-		padding:0;
-	}
+        }
 
-	.btn-margin-right{
-		margin-right:.5em;
-	}
+        .form-signin
+        {
+            max-width: 330px;
+            padding: 15px;
+            margin: 0 auto;
+        }
+        .form-signin .form-control
+        {
+            position: relative;
+            font-size: 16px;
+            height: auto;
+            padding: 10px;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        .form-signin .form-control:focus
+        {
+            z-index: 2;
+        }
+        .form-signin input[type="text"]
+        {
+            margin-bottom: -1px;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+        .form-signin input[type="password"]
+        {
+            margin-bottom: 10px;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+        .account-wall
+        {
+            margin-top: 40px;
+            padding: 40px 0px 20px 0px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16);
+        }
+        .login-title
+        {
+            color: #555;
+            font-size: 22px;
+            font-weight: 400;
+            display: block;
+        }
+        .profile-img
+        {
+            width: 96px;
+            height: 96px;
+            margin: 0 auto 10px;
+            display: block;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+        }
+        .select-img
+        {
+            border-radius: 50%;
+            display: block;
+            height: 75px;
+            margin: 0 30px 10px;
+            width: 75px;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+        }
+        .select-name
+        {
+            display: block;
+            margin: 30px 10px 10px;
+        }
 
-	.margin-bottom-1em{
-		margin-bottom:1em;
-	}
+        .logo-img
+        {
+            width: 96px;
+            height: 96px;
+            margin: 0 auto 10px;
+            display: block;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+        }
 
-	.left-margin{
-		margin:0 .5em 0 0;
-	}
+        .margin-top-40{
+            margin-top:40px;
+        }
 
-	.right-button-margin{
-		margin: 0 0 1em 0;
-		overflow: hidden;
-	}
+        .text-align-center{
+            text-align:center;
+        }
+        .navbar-default{
+            background-color:  #62C6F8;
+        }
 
-	.thumb-image {
-		float:left;
-		width: 150px;
-		height: 150px;
-		margin:.6em 1.2em 0 0;
-		position:relative;
-	}
+    </style>
 
-	.thumb-image .delete-image {
-		position:absolute;
-		top:-10px;
-		right:-10px;
-	}
-
-	.delete-image img{
-		width:25px;
-	}
-
-	.thumb-wrapper{
-		border:thin solid #999;
-		float:left;
-		width: 150px;
-		height: 150px;
-		margin:.6em 1.2em 0 0;
-		position:relative;
-	}
-
-	.thumb-wrapper img{
-		width:130px; height:130px; margin:10px;
-	}
-
-	#html-btn {
-		display:none;
-	}
-
-	.delete-pdf{
-		margin-left:.5em;
-	}
-
-	.delete-pdf img{
-		width:20px; cursor:pointer;
-	}
-
-	.pdf-item{
-		padding:0 0 1em 0;
-	}
-	</style>
 </head>
 <body>
 
@@ -128,6 +177,6 @@
 		<!-- display page title -->
         <div class="col-md-12">
             <div class="page-header">
-                <h1><?php echo isset($page_title) ? $page_title : "The Code of a Ninja"; ?></h1>
+                <h1><?php echo isset($page_title) ? $page_title : "The Student Buddies System"; ?></h1>
             </div>
         </div>

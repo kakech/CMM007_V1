@@ -158,7 +158,7 @@ if(!isset($_SESSION['cart'])){
             text-align:center;
         }
         .navbar-default{
-            background-color:  #00acee;
+            background-color:  #62C6F8;
         }
 
     </style>
