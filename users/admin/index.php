@@ -25,12 +25,27 @@ echo "<div class='col-md-12'>";
 
 	else if($action=='logged_in_as_admin'){
 		echo "<div class='alert alert-info'>";
-			echo "<strong>You</strong> are logged in as admin.";
+			echo "<strong>You</strong> are logged in as the System Admin!";
 		echo "</div>";
 	}
 
 	echo "<div class='alert alert-info'>";
-		echo "The System admin content section.";
+		echo "<strong>On this page you have rights to perform the following:</strong>";
+		echo "<br>";
+        echo "<li>Create/View/Update/Delete general users.</li>";
+        echo "<br>";
+        echo "<li>Change user access level from just normal user to admin and vice versa.</li>";
+        echo "<br>";
+        echo "<li>Search user by email address.</li>";
+        echo "<br>";
+        echo "<li>Edit profile.</li>";
+        echo "<br>";
+        echo "<li>Change Passwords.</li>";
+        echo "<br>";
+        echo "<li>Change status of a registered user from a pending registration to a confirmed registration.</li>";
+        echo "<br>";
+        echo "<li>Or Logout.</li>";
+
 	echo "</div>";
 
 echo "</div>";

@@ -12,7 +12,8 @@
 			</button>
 
 
-			<a class="navbar-brand" href="<?php echo $home_url; ?>admin/index.php">The System Admin</a>
+            <a class="navbar-brand" href="../index.php">The Student Buddies </a>
+
 		</div>
 
 		<div class="navbar-collapse collapse">
