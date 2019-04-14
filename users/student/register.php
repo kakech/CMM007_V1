@@ -40,7 +40,7 @@ require 'includes/form_handlers/login_handler.php';
 
 			<div class="login_header">
 				<h1>Meet Student Buddies!</h1>
-				Login or sign up below to get a username!
+				Please login or Confirm your credentials below!
 			</div>
 			<br>
 			<div id="first">
@@ -57,7 +57,7 @@ require 'includes/form_handlers/login_handler.php';
 					<?php if(in_array("Email or password was incorrect<br>", $error_array)) echo  "Email or password was incorrect<br>"; ?>
 					<input type="submit" name="login_button" value="Login">
 					<br>
-					<a href="#" id="signup" class="signup">Need a username? Sign Up Here!</a>
+					<a href="#" id="signup" class="signup">Please click here to confirm your credentials!</a>
                     <br>
                     <a href="../index.php" id="backToHome" class="backToHome">Back to Home...</a>
 
@@ -115,11 +115,11 @@ require 'includes/form_handlers/login_handler.php';
 					else if(in_array("Your password must be betwen 5 and 30 characters<br>", $error_array)) echo "Your password must be between 5 and 30 characters<br>"; ?>
 
 
-					<input type="submit" name="register_button" value="Register">
+					<input type="submit" name="register_button" value="Confirm">
 					<br>
 
-					<?php if(in_array("<span style='color: #14C800;'>The ChatRoom username created! Login!</span><br>", $error_array)) echo "<span style='color: #14C800;'>The ChatRoom username created! Login!</span><br>"; ?>
-					<a href="#" id="signin" class="signin">Already have a username? Sign in here!</a>
+					<?php if(in_array("<span style='color: #14C800;'>Your credentials confirmed! Login!</span><br>", $error_array)) echo "<span style='color: #14C800;'>Your credentials confirmed! Login!</span><br>"; ?>
+					<a href="#" id="signin" class="signin">Credentials Confirmed? Sign in here!</a>
                     <br>
                     <a href="../index.php" id="backToHome" class="backToHome">Back to Home...</a>
 				</form>
