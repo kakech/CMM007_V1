@@ -2,17 +2,17 @@
 	<!-- /container -->
 
 <!-- jQuery library -->
-<script src="<?php echo $home_url; ?>libs/js/jquery.js"></script>
+<script src="../libs/js/jquery.js"</script>
 
 <!-- our custom JavaScript -->
-<script src="<?php echo $home_url; ?>libs/js/custom-script.js"></script>
+<script src="../libs/js/custom-script.js"></script>
 
 <!-- jQuery UI JavaScript -->
-<script src="<?php echo $home_url; ?>libs/js/jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
+<script src="../libs/js/jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
 	
 <!-- Bootstrap JavaScript -->
-<script src="<?php echo $home_url; ?>libs/js/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="<?php echo $home_url; ?>libs/js/bootstrap/docs-assets/js/holder.js"></script>
+<script src="../libs/js/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../libs/js/bootstrap/docs-assets/js/holder.js"></script>
 
 <script>
 // jQuery codes
@@ -89,7 +89,7 @@ $(document).ready(function(){
 </script>
 
 <!-- rich text editor for product description, etc. -->
-<script type="text/javascript" src="<?php echo $home_url; ?>libs/js/yellow-text-master/dist/yellow-text.min.js"></script>
+<script type="text/javascript" src="../libs/js/yellow-text-master/dist/yellow-text.min.js"></script>
 <script type="text/javascript">
 $(function() {
 	// make the rich text editor plugin work

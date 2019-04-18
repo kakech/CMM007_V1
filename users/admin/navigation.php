@@ -22,7 +22,7 @@
 
 				<!-- highlight for order related pages -->
 				<li <?php echo $page_title=="Admin Index" ? "class='active'" : ""; ?>>
-					<a href="<?php echo $home_url; ?>admin/index.php">Home</a>
+					<a href="../admin/index.php">Home</a>
 				</li>
 
 				<!-- highlight for user related pages -->
@@ -35,7 +35,7 @@
 							|| strip_tags($page_title)=="Users / Edit User"
 							|| strip_tags($page_title)=="Users / Create User"
 							? "class='active'" : ""; ?> >
-					<a href="<?php echo $home_url; ?>admin/read_users.php">Users</a>
+					<a href="../admin/read_users.php">Users</a>
 				</li>
 			</ul>
 
@@ -50,16 +50,16 @@
 					<ul class="dropdown-menu" role="menu">
 						<!-- update currently logged in admin user -->
 						<li>
-							<a href="<?php echo $home_url . "admin/update_user.php?id=" . $_SESSION['user_id']; ?>">Edit Profile</a>
+							<a href="../admin/update_user.php?id=" . $_SESSION['user_id'] >Edit Profile</a>
 						</li>
 
 						<!-- change password -->
 						<li>
-							<a href="<?php echo $home_url . "admin/change_password.php?id=" . $_SESSION['user_id']; ?>">Change Password</a>
+							<a href="../admin/change_password.php?id=" . $_SESSION['user_id']>Change Password</a>
 						</li>
 
 						<!-- log out user -->
-						<li><a href="<?php echo $home_url; ?>logout.php">Logout</a></li>
+						<li><a href="../logout.php">Logout</a></li>
 					</ul>
 				</li>
 			</ul>

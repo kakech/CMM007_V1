@@ -3,10 +3,10 @@
 class Database{
 
 	//  database credentials
-	private $host = "localhost";
-	private $db_name = "social";
-	private $username = "root";
-	private $password = "";
+	private $host = "CSDM-WEBDEV";
+	private $db_name = "db1712499_cw_db";
+	private $username = "1712499";
+	private $password = "1712499";
 	public $conn;
 
 	// get the database connection

@@ -45,12 +45,12 @@ if($_POST){
 
 		// if access level is 'Admin', redirect to admin section
 		if($user->access_level=='Admin'){
-			header("Location: {$home_url}admin/index.php?action=login_success");
+			header("Location: admin/index.php?action=login_success");
 		}
 
 		// else, redirect only to 'Customer' section
 		else{
-			header("Location: {$home_url}index.php?action=login_success");
+			header("Location: index.php?action=login_success");
 		}
 	}
 
@@ -106,7 +106,7 @@ if($access_denied){
 		<div id="my-tab-content" class="tab-content">
 			<div class="tab-pane active" id="login">
 				<img class="profile-img" src="images/login-icon.png">
-				<form class="form-signin" action="login" method="post">
+				<form class="form-signin" action="login.php" method="post">
 					<input type="text" name="email" class="form-control" placeholder="Email" required autofocus />
 					<input type="password" name="password" class="form-control" placeholder="Password" required />
 					<input type="submit" class="btn btn-lg btn-primary btn-block" value="Log In" />
@@ -115,7 +115,7 @@ if($access_denied){
 
 			<!-- give user other options -->
 			<div style='text-align:center;'>
-				<a href='<?php echo $home_url; ?>register'>Sign up</a> • <a href='<?php echo $home_url; ?>forgot_password'>Forgot password?</a>
+				<a href="register.php">Sign up</a> • <a href="forgot_password.php">Forgot password?</a>
 			</div>
 
 		</div>

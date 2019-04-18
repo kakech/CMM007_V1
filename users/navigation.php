@@ -43,12 +43,12 @@
 					</a>
 					<ul class="dropdown-menu" role="menu">
 						<li <?php echo $page_title=="Edit Profile" ? "class='active'" : ""; ?>>
-							<a href="<?php echo $home_url; ?>edit_profile.php">Edit Profile</a>
+							<a href="edit_profile.php">Edit Profile</a>
 						</li>
 						<li <?php echo $page_title=="Change Password" ? "class='active'" : ""; ?>>
-							<a href="<?php echo $home_url; ?>change_password.php">Change Password</a>
+							<a href="change_password.php">Change Password</a>
 						</li>
-						<li><a href="<?php echo $home_url; ?>logout.php">Logout</a></li>
+						<li><a href="logout.php">Logout</a></li>
 					</ul>
 				</li>
 			</ul>
@@ -60,13 +60,13 @@
 			?>
 			<ul class="nav navbar-nav pull-right">
 				<li <?php echo $page_title=="Login" ? "class='active'" : ""; ?>>
-					<a href="<?php echo $home_url; ?>login">
+					<a href="login.php"login>
 						<span class="glyphicon glyphicon-log-in"></span> Log In
 					</a>
 				</li>
 
 				<li <?php echo $page_title=="Register" ? "class='active'" : ""; ?>>
-					<a href="<?php echo $home_url; ?>register">
+					<a href="register.php" register>
 						<span class="glyphicon glyphicon-check"></span> Sign Up
 					</a>
 				</li>
