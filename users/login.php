@@ -96,7 +96,7 @@ else if($action=='please_login'){
 if($access_denied){
 	echo "<div class=\"alert alert-danger margin-top-40\" role=\"alert\">";
 		echo "Access Denied.<br /><br />";
-		echo "Your username or password maybe incorrect";
+		echo "Your username or password incorrect";
 	echo "</div>";
 }
 ?>

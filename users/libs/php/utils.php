@@ -53,9 +53,9 @@ class Utils{
 		// $mail->Debugoutput = 'html';
 
 		//Set the hostname of the mail server
-		$mail->Host = 'smtp.gmail.com';
+		//$mail->Host = 'smtp.gmail.com';
 		// use
-		// $mail->Host = gethostbyname('smtp.gmail.com');
+		$mail->Host = gethostbyname('smtp.gmail.com');
 		// if your network does not support SMTP over IPv6
 
 		//Set the SMTP port number - 587 for authenticated TLS, a.k.a. RFC4409 SMTP submission
@@ -71,7 +71,7 @@ class Utils{
 		$from_name="Admin";
 
 		// set your gmail address here
-		$from_email="cloud.surrey@gmail.com";
+		$from_email="1712499@rgu.ac.uk";
 
 		//Username to use for SMTP authentication - use full email address for gmail
 		$mail->Username = $from_email;
@@ -118,7 +118,7 @@ class Utils{
 	public function sendEmailViaPhpMail($send_to_email, $subject, $body){
 
 		$from_name="Kuanyin Malang";
-		$from_email="cloud.surrey@gmail.com";
+		$from_email="1712499@rgu.ac.uk";
 
 		$headers  = "MIME-Version: 1.0\r\n";
 		$headers .= "Content-type: text/html; charset=iso-8859-1\r\n";
